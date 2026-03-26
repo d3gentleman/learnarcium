@@ -1,5 +1,5 @@
 import ActionLink from './ActionLink';
-import EcosystemMap, { type EcosystemMapProps } from './EcosystemMap';
+import BentoMap, { type BentoMapProps } from './BentoMap';
 import { HomepageBlocks, UIConfig } from '../types/domain';
 
 interface HeroMapPreviewProps {
@@ -7,7 +7,7 @@ interface HeroMapPreviewProps {
   quickLinks: HomepageBlocks['quickLinks'];
   liveStatusFeed: HomepageBlocks['liveStatusFeed'];
   ui: UIConfig;
-  mapProps: Omit<EcosystemMapProps, 'variant' | 'defaultMode'>;
+  mapProps: Omit<BentoMapProps, 'variant' | 'defaultMode'>;
 }
 
 export default function HeroMapPreview({ hero, quickLinks, liveStatusFeed, ui, mapProps }: HeroMapPreviewProps) {
@@ -76,15 +76,15 @@ export default function HeroMapPreview({ hero, quickLinks, liveStatusFeed, ui, m
           <div className="absolute inset-0 atlas-preview-mask" aria-hidden="true" />
           <div className="absolute right-12 top-10 z-10 hidden gap-3 lg:flex">
             <div className="rounded-full border border-outline-variant/25 bg-black/40 px-4 py-2 text-[10px] uppercase tracking-[0.22em] text-outline">
-              {categoryCount} Territories
+              {categoryCount} {ui.heroAtlasTerritories}
             </div>
             <div className="rounded-full border border-outline-variant/25 bg-black/40 px-4 py-2 text-[10px] uppercase tracking-[0.22em] text-outline">
-              {featuredCount} Featured Systems
+              {featuredCount} {ui.heroFeaturedSystems}
             </div>
           </div>
 
           <div className="absolute inset-0 opacity-80 select-none pointer-events-none" aria-hidden="true">
-            <EcosystemMap {...mapProps} variant="preview" defaultMode="beginner" />
+            <BentoMap {...mapProps} variant="preview" />
           </div>
 
           <div className="relative z-10 max-w-2xl">

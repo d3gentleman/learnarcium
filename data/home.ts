@@ -154,5 +154,16 @@ export const uiStrings: UIConfig = {
   discoveryGroupGlossary: "Glossary Terms",
   discoveryGroupArticles: "Guides & Articles",
   discoveryOpenResult: "Open Record",
-  discoverySecondaryAction: "Panel Action"
+  discoverySecondaryAction: "Panel Action",
+  mapExpandCategory: "Expand",
+  mapCollapseCategory: "Close",
+  mapEmptyState: "No projects match this filter.",
+  mapTagFilter: "Filter by Tag",
+  mapAllTags: "All Tags",
+  mapAllCategories: "All Categories",
+  mapProjectCount: "Projects",
+  mapCoreStatusLabel: "NETWORK_STATUS:",
+  mapCoreStatusValue: "SYNC_OK",
+  mapOverviewTitle: "Ecosystem Overview",
+  mapBackToOverview: "← Back to Overview",
 };

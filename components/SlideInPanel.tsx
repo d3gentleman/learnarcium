@@ -2,11 +2,10 @@
 import type { ReactNode } from 'react';
 import { motion, AnimatePresence, useReducedMotion } from 'framer-motion';
 import ActionLink from './ActionLink';
-import { MapMode, MapNodeDefinition, UIConfig } from '../types/domain';
+import { MapNodeDefinition, UIConfig } from '../types/domain';
 
 interface SlideInPanelProps {
   activeNode: MapNodeDefinition | null;
-  mode: MapMode;
   onClose: () => void;
   ui: UIConfig;
 }
@@ -26,10 +25,9 @@ function Section({
   );
 }
 
-export default function SlideInPanel({ activeNode, mode, onClose, ui }: SlideInPanelProps) {
+export default function SlideInPanel({ activeNode, onClose, ui }: SlideInPanelProps) {
   const shouldReduceMotion = useReducedMotion();
   const transition = { type: 'spring' as const, damping: 25, stiffness: 200, duration: shouldReduceMotion ? 0 : undefined };
-  const isTechnical = mode === 'technical';
 
   return (
     <AnimatePresence>
@@ -43,23 +41,41 @@ export default function SlideInPanel({ activeNode, mode, onClose, ui }: SlideInP
         >
           <div className="absolute inset-0 pointer-events-none bg-[radial-gradient(circle_at_top_right,rgba(0,240,255,0.08)_0%,transparent_30%),linear-gradient(rgba(255,255,255,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.02)_1px,transparent_1px)] bg-[size:auto,24px_24px,24px_24px] opacity-70" />
 
-          <div className="relative z-10 flex items-start justify-between border-b border-outline-variant/30 bg-black/20 px-5 py-4">
-            <div>
+          <div className="relative z-10 flex items-start gap-4 border-b border-outline-variant/30 bg-black/20 px-5 py-4">
+            {/* Logo or fallback */}
+            {activeNode.logoUrl ? (
+              <img
+                src={activeNode.logoUrl}
+                alt={`${activeNode.label} logo`}
+                className="h-14 w-14 rounded-[14px] object-contain shrink-0 border border-outline-variant/20 bg-black/30 p-1"
+              />
+            ) : (
+              <div
+                className="h-14 w-14 rounded-[14px] shrink-0 border border-outline-variant/20 bg-black/30 flex items-center justify-center"
+              >
+                <span className="text-2xl font-black text-primary/60">
+                  {activeNode.label.charAt(0)}
+                </span>
+              </div>
+            )}
+
+            <div className="flex-1 min-w-0">
               <div className="text-[10px] font-bold uppercase tracking-[0.24em] text-outline">
                 {ui.mapPanelHeader}: {activeNode.kind}
               </div>
-              <h2 className="mt-3 text-3xl font-black uppercase tracking-tight text-white font-headline">
-                {isTechnical ? activeNode.technicalLabel || activeNode.label : activeNode.label}
+              <h2 className="mt-2 text-2xl font-black uppercase tracking-tight text-white font-headline leading-tight">
+                {activeNode.label}
               </h2>
               <div className="mt-2 inline-flex items-center gap-2 rounded-full border border-outline-variant/30 bg-black/30 px-3 py-1 text-[10px] uppercase tracking-[0.18em] text-primary">
                 <span className="inline-block h-2 w-2 rounded-full bg-primary" />
                 {activeNode.tag}
               </div>
             </div>
+
             <button
               onClick={onClose}
               aria-label={ui.mapClose}
-              className="rounded-full border border-primary/20 bg-primary/10 px-3 py-2 text-primary transition-all hover:bg-primary/20 hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
+              className="rounded-full border border-primary/20 bg-primary/10 px-3 py-2 text-primary transition-all hover:bg-primary/20 hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary shrink-0"
             >
               [X]
             </button>
@@ -80,7 +96,7 @@ export default function SlideInPanel({ activeNode, mode, onClose, ui }: SlideInP
             </Section>
 
             <Section title={ui.mapPanelTechnicalTitle}>
-              {isTechnical ? activeNode.technicalDescription : ui.mapTechnicalHint}
+              {activeNode.technicalDescription}
             </Section>
 
             {activeNode.action && (

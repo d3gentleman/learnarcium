@@ -21,6 +21,7 @@ export interface MapNodeDefinition {
   priority: MapNodePriority;
   featuredOnOverview: boolean;
   categoryId?: string;
+  logoUrl?: string;
   action?: LinkAction;
 }
 
@@ -156,56 +157,8 @@ export interface FooterConfig {
 
 export type UIConfig = Record<string, string>;
 
-export interface MapViewportConfig {
-  centerX: number;
-  centerY: number;
-  zoom: number;
-}
+export type CategoryColors = Record<string, string>;
 
-export interface SceneConfig {
-  nodePositions: Record<string, { x: number; y: number }>;
-  regionBounds: Record<string, { minX: number; maxX: number; minY: number; maxY: number }>;
-  categoryColors: Record<string, string>;
-  overviewViewport: MapViewportConfig;
-  previewViewport: MapViewportConfig;
-  featuredProjectAnchors: Record<string, { x: number; y: number }>;
-}
-
-export interface MapCanvasDisplayState {
-  color: string;
-  displayLabel?: string;
-  displayTag?: string;
-  dimmed?: boolean;
-  focused?: boolean;
-  expanded?: boolean;
-  featured?: boolean;
-  selected?: boolean;
-  projectCount?: number;
-  variant?: MapVariant;
-  mode?: MapMode;
-}
-
-export interface MapRegionNodeData {
-  id: string;
-  kind: 'region';
-  label: string;
-  tag: 'REGION';
-  beginnerDescription: string;
-  technicalDescription: string;
-  categoryId: string;
-}
-
-export type MapCanvasNodeData =
-  | (MapNodeDefinition & MapCanvasDisplayState)
-  | (MapRegionNodeData & MapCanvasDisplayState);
-
-export interface MapCanvasEdgeData {
-  accentColor: string;
-  primary: boolean;
-  relationKind: MapEdgeDefinition['relationKind'];
-  beginnerCaption?: string;
-  technicalCaption?: string;
-}
 
 export type DiscoveryItemKind = 'core' | 'project' | 'category' | 'article' | 'glossary';
 

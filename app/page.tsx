@@ -8,9 +8,8 @@ import {
   getFooterConfig,
   getHomepageBlocks,
   getMapCategories,
-  getMapEdges,
   getMapNodes,
-  getMapSceneLayout,
+  getCategoryColors,
   getNavigation,
   getRecentArticles,
   getUIConfig,
@@ -24,9 +23,8 @@ export default function Home() {
   const ui = getUIConfig();
   const previewMapProps = {
     domainNodes: getMapNodes(),
-    domainEdges: getMapEdges(),
     mapCategories: getMapCategories(),
-    sceneConfig: getMapSceneLayout(),
+    categoryColors: getCategoryColors(),
     ui,
   };
 

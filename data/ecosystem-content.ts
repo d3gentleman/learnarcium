@@ -87,6 +87,7 @@ const projectNodes: MapNodeDefinition[] = [
     priority: 'high',
     featuredOnOverview: true,
     categoryId: 'cat-defi',
+    logoUrl: '/logos/jupiter.png',
     action: { type: 'external', href: 'https://jup.ag', label: 'Visit App' },
   },
   {
@@ -102,6 +103,7 @@ const projectNodes: MapNodeDefinition[] = [
     priority: 'medium',
     featuredOnOverview: false,
     categoryId: 'cat-defi',
+    logoUrl: '/logos/undesk.png',
     action: { type: 'external', href: 'https://twitter.com/undesktrade', label: 'Visit Project' },
   },
   {
@@ -132,6 +134,7 @@ const projectNodes: MapNodeDefinition[] = [
     priority: 'high',
     featuredOnOverview: true,
     categoryId: 'cat-prediction',
+    logoUrl: '/logos/pythia.png',
     action: { type: 'external', href: 'https://twitter.com/pythiamarkets', label: 'Visit Project' },
   },
   {
@@ -162,6 +165,7 @@ const projectNodes: MapNodeDefinition[] = [
     priority: 'high',
     featuredOnOverview: true,
     categoryId: 'cat-ai',
+    logoUrl: '/logos/nosana.png',
     action: { type: 'external', href: 'https://nosana.io', label: 'Visit Project' },
   },
   {
@@ -177,6 +181,7 @@ const projectNodes: MapNodeDefinition[] = [
     priority: 'medium',
     featuredOnOverview: false,
     categoryId: 'cat-ai',
+    logoUrl: '/logos/ionet.png',
     action: { type: 'external', href: 'https://io.net', label: 'Visit Project' },
   },
   {
@@ -207,6 +212,7 @@ const projectNodes: MapNodeDefinition[] = [
     priority: 'high',
     featuredOnOverview: true,
     categoryId: 'cat-payments',
+    logoUrl: '/logos/squads.png',
     action: { type: 'external', href: 'https://squads.so', label: 'Visit Project' },
   },
   {
@@ -237,6 +243,7 @@ const projectNodes: MapNodeDefinition[] = [
     priority: 'medium',
     featuredOnOverview: false,
     categoryId: 'cat-consumer',
+    logoUrl: '/logos/dreader.png',
     action: { type: 'unavailable', label: 'Coming Soon', reason: 'This project is not yet live.' },
   },
 ];

@@ -1,4 +1,5 @@
 import { 
+  CategoryColors,
   DiscoveryItem,
   GlossaryTermRecord,
   MapNodeDefinition, 
@@ -11,11 +12,10 @@ import {
   LinkAction, 
   FooterConfig, 
   UIConfig, 
-  SceneConfig 
 } from '../types/domain';
 
 import { nodes, edges, categories as mapCategories } from '../data/ecosystem-content';
-import { sceneConfig } from '../data/scene-config';
+import { CATEGORY_COLORS } from '../data/scene-config';
 import { homepageBlocks, footerConfig, uiStrings, navLinks, recentArticles } from '../data/home';
 import { getGlossaryTermPath, glossaryTermRecords } from '../data/glossary-content';
 import {
@@ -68,8 +68,8 @@ export function getUIConfig(): UIConfig {
   return uiStrings;
 }
 
-export function getMapSceneLayout(): SceneConfig {
-  return sceneConfig;
+export function getCategoryColors(): CategoryColors {
+  return CATEGORY_COLORS;
 }
 
 export function getKnowledgeCategories(): KnowledgeCategoryRecord[] {
