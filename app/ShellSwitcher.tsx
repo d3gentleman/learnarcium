@@ -1,12 +1,9 @@
-'use client';
-
-import { usePathname } from 'next/navigation';
-import DiscoveryShell from '@/components/DiscoveryShell';
+import { DiscoveryItem, UIConfig } from '@/types/domain';
 
 interface ShellSwitcherProps {
   children: React.ReactNode;
-  discoveryItems: any;
-  ui: any;
+  discoveryItems: DiscoveryItem[];
+  ui: UIConfig;
 }
 
 /**

@@ -1,0 +1,11 @@
+{
+  "id": "proj-jupiter",
+  "slug": "jupiter",
+  "title": "Jupiter",
+  "tag": "DEX_AGGREGATOR",
+  "summary": "A popular trading platform minimizing price impact.",
+  "website": "https://jup.ag",
+  "status": "sync_ok",
+  "categoryId": "cat-defi",
+  "isFeatured": true
+}

@@ -1,0 +1,11 @@
+{
+  "id": "proj-epoch",
+  "slug": "epoch",
+  "title": "Epoch",
+  "tag": "PREDICTION_MARKET",
+  "summary": "A private prediction market to forecast events.",
+  "website": "",
+  "status": "coming_soon",
+  "categoryId": "cat-prediction",
+  "isFeatured": false
+}

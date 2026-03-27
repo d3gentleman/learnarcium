@@ -1,0 +1,15 @@
+{
+  "id": "glossary-mpc",
+  "slug": "multi-party-computation",
+  "term": "Multi-Party Computation",
+  "tag": "CRYPTOGRAPHY",
+  "summary": "Multi-Party Computation, or MPC, is the cryptographic approach that lets multiple participants compute together without any one party learning every secret input.",
+  "aliases": ["MPC"],
+  "keywords": ["cryptography", "private computation"],
+  "priority": "high",
+  "source": {
+    "label": "Arcium Docs: Multi-Party Computation (MPC)",
+    "href": "https://docs.arcium.com/introduction/basic-conceptsmulti-party-computation-mpc"
+  },
+  "relatedCategoryIds": ["enc-crypto"]
+}
