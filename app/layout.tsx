@@ -19,6 +19,8 @@ export const metadata: Metadata = {
   description: 'Educational hub about the Arcium ecosystem.',
 };
 
+import { Providers } from './providers';
+
 export default async function RootLayout({
   children,
 }: {
@@ -30,9 +32,11 @@ export default async function RootLayout({
   return (
     <html lang="en" className="dark scroll-smooth">
       <body className={`${spaceGrotesk.variable} ${jetbrainsMono.variable} selection:bg-primary/30 selection:text-primary min-h-screen antialiased bg-black text-white font-jetbrains`}>
-        <ShellSwitcher discoveryItems={discoveryItems} ui={ui}>
-          {children}
-        </ShellSwitcher>
+        <Providers>
+          <ShellSwitcher discoveryItems={discoveryItems} ui={ui}>
+            {children}
+          </ShellSwitcher>
+        </Providers>
       </body>
     </html>
   );
