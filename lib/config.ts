@@ -2,27 +2,27 @@ import { FooterConfig, LinkAction, UIConfig } from "@/types/domain";
 
 export const NAVIGATION_CONFIG: LinkAction[] = [
   {
-    type: "internal",
+    type: "internal" as const,
     label: "Ecosystem",
     href: "/ecosystem"
   },
   {
-    type: "internal",
+    type: "internal" as const,
     label: "Encyclopedia",
     href: "/encyclopedia"
   },
   {
-    type: "internal",
+    type: "internal" as const,
     label: "Glossary",
     href: "/glossary"
   },
   {
-    type: "unavailable",
+    type: "unavailable" as const,
     label: "Infrastructure",
     reason: "Infrastructure guides are not published yet."
   },
   {
-    type: "unavailable",
+    type: "unavailable" as const,
     label: "About",
     reason: "About page is not published yet."
   }
@@ -31,17 +31,17 @@ export const NAVIGATION_CONFIG: LinkAction[] = [
 export const FOOTER_CONFIG: FooterConfig = {
   links: [
     {
-      type: "external",
+      type: "external" as const,
       label: "Official Docs",
       href: "https://docs.arcium.com"
     },
     {
-      type: "external",
+      type: "external" as const,
       label: "X/Twitter",
       href: "https://twitter.com/ArciumHQ"
     },
     {
-      type: "external",
+      type: "external" as const,
       label: "Discord",
       href: "https://discord.gg/arcium"
     }
@@ -130,12 +130,12 @@ export const HOMEPAGE_CONFIG = {
     titleLine2: "ECOSYSTEM_ATLAS",
     description: "Explore the builders, guides, and private computation concepts that make the Arcium network legible.",
     primaryCta: {
-      type: "internal",
+      type: "internal" as const,
       label: "View Ecosystem",
       href: "/ecosystem"
     },
     secondaryCta: {
-      type: "command",
+      type: "command" as const,
       command: "open-discovery",
       label: "Search Builders & Guides"
     }
@@ -147,7 +147,7 @@ export const HOMEPAGE_CONFIG = {
       title: "Understanding Arcium",
       description: "A concise overview of Arcium as a confidential execution layer and why it matters across the rest of the atlas.",
       action: {
-        type: "internal",
+        type: "internal" as const,
         label: "Read Guide",
         href: "/encyclopedia/articles/understanding-arcium"
       }
@@ -158,7 +158,7 @@ export const HOMEPAGE_CONFIG = {
       title: "What are MXEs?",
       description: "An introductory framing for the execution environments that power Arcium across the network.",
       action: {
-        type: "internal",
+        type: "internal" as const,
         label: "Read Guide",
         href: "/encyclopedia/articles/what-are-mxes"
       }
@@ -169,7 +169,7 @@ export const HOMEPAGE_CONFIG = {
       title: "Ecosystem Overview",
       description: "A quick orientation to the major territories on the Arcium map and how to read them.",
       action: {
-        type: "internal",
+        type: "internal" as const,
         label: "Read Overview",
         href: "/encyclopedia/articles/ecosystem-overview"
       }
@@ -177,17 +177,17 @@ export const HOMEPAGE_CONFIG = {
   ],
   quickLinks: [
     {
-      type: "internal",
+      type: "internal" as const,
       label: "View Ecosystem",
       href: "/ecosystem"
     },
     {
-      type: "command",
+      type: "command" as const,
       command: "open-discovery",
       label: "Search Builders & Docs"
     },
     {
-      type: "unavailable",
+      type: "unavailable" as const,
       label: "View MPC Node Specs",
       reason: "Infrastructure specs are not published yet."
     }

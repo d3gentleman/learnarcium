@@ -1,30 +1,30 @@
 import type { Metadata } from 'next';
 import GlossaryExplorer from '@/components/GlossaryExplorer';
 import KnowledgePageFrame from '@/components/KnowledgePageFrame';
-import { getKnowledgeCategoryPath } from '@/data/knowledge-content';
-import { getGlossaryTerms, getKnowledgeCategories, getMapNodes } from '@/lib/content';
+import { 
+    getGlossaryTerms, 
+    getKnowledgeCategories, 
+    getKnowledgeCategoryPath 
+} from '@/lib/content';
 
 export const metadata: Metadata = {
   title: 'Glossary | ARCIUM ATLAS',
   description: 'An A-Z reference for Arcium terms, with local summaries and source links back to the official docs.',
 };
 
-export default function GlossaryPage() {
-  const terms = getGlossaryTerms();
-  const categories = getKnowledgeCategories();
-  const mapNodes = getMapNodes();
+export default async function GlossaryPage() {
+  const [terms, categories] = await Promise.all([
+    getGlossaryTerms(),
+    getKnowledgeCategories()
+  ]);
 
   const categoryById = new Map(categories.map((category) => [category.id, category]));
-  const nodeById = new Map(mapNodes.map((node) => [node.id, node]));
 
   const enrichedTerms = terms.map((term) => {
     const relatedCategoryLinks = (term.relatedCategoryIds || [])
       .map((categoryId) => {
         const category = categoryById.get(categoryId);
-
-        if (!category) {
-          return null;
-        }
+        if (!category) return null;
 
         return {
           kind: 'Category' as const,
@@ -34,25 +34,12 @@ export default function GlossaryPage() {
       })
       .filter((link): link is NonNullable<typeof link> => Boolean(link));
 
-    const relatedNodeLinks = (term.relatedNodeIds || [])
-      .map((nodeId) => {
-        const node = nodeById.get(nodeId);
-
-        if (!node) {
-          return null;
-        }
-
-        return {
-          kind: 'Map' as const,
-          label: node.label,
-          href: `/map?focus=${node.id}`,
-        };
-      })
-      .filter((link): link is NonNullable<typeof link> => Boolean(link));
-
     return {
       ...term,
-      relatedLinks: [...relatedCategoryLinks, ...relatedNodeLinks],
+      aliases: term.aliases || [],
+      keywords: term.keywords || [],
+      source: term.source || { label: 'Arcium Docs', href: 'https://docs.arcium.com' },
+      relatedLinks: [...relatedCategoryLinks],
     };
   });
 
@@ -60,7 +47,7 @@ export default function GlossaryPage() {
     <KnowledgePageFrame
       eyebrow="GLOSSARY_INDEX"
       title="Arcium Reference Glossary"
-      summary="A top-level reference surface for the atlas: browse Arcium terminology alphabetically, search aliases and keywords, and jump from each term into deeper encyclopedia or map context."
+      summary="A top-level reference surface for the atlas: browse Arcium terminology alphabetically, search aliases and keywords, and jump from each term into deeper encyclopedia context."
       statusLabel="GLOSSARY_LINKED"
       breadcrumbs={[
         { label: 'Home', href: '/' },
@@ -80,7 +67,7 @@ export default function GlossaryPage() {
         </>
       }
     >
-      <GlossaryExplorer terms={enrichedTerms} />
+      <GlossaryExplorer terms={enrichedTerms as any} />
     </KnowledgePageFrame>
   );
 }

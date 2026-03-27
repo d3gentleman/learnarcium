@@ -3,13 +3,13 @@ import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import KnowledgePageFrame from '@/components/KnowledgePageFrame';
 import KnowledgeRecordCard from '@/components/KnowledgeRecordCard';
-import { getKnowledgeArticlePath, getKnowledgeCategoryPath } from '@/data/knowledge-content';
 import {
   getKnowledgeArticleBySlug,
   getKnowledgeArticles,
   getKnowledgeCategoryBySlug,
   getKnowledgeCategories,
-  getMapNodes,
+  getKnowledgeArticlePath,
+  getKnowledgeCategoryPath
 } from '@/lib/content';
 
 interface CategoryPageProps {
@@ -18,14 +18,15 @@ interface CategoryPageProps {
   };
 }
 
-export function generateStaticParams() {
-  return getKnowledgeCategories().map((category) => ({
+export async function generateStaticParams() {
+  const categories = await getKnowledgeCategories();
+  return categories.map((category) => ({
     slug: category.slug,
   }));
 }
 
-export function generateMetadata({ params }: CategoryPageProps): Metadata {
-  const category = getKnowledgeCategoryBySlug(params.slug);
+export async function generateMetadata({ params }: CategoryPageProps): Promise<Metadata> {
+  const category = await getKnowledgeCategoryBySlug(params.slug);
 
   if (!category) {
     return {
@@ -39,30 +40,26 @@ export function generateMetadata({ params }: CategoryPageProps): Metadata {
   };
 }
 
-export default function CategoryPage({ params }: CategoryPageProps) {
-  const category = getKnowledgeCategoryBySlug(params.slug);
+export default async function CategoryPage({ params }: CategoryPageProps) {
+  const [category, allArticles] = await Promise.all([
+    getKnowledgeCategoryBySlug(params.slug),
+    getKnowledgeArticles()
+  ]);
 
   if (!category) {
     notFound();
   }
 
-  const articles = getKnowledgeArticles().filter((article) =>
-    article.relatedCategoryId === category.id || article.relatedNodeIds?.includes(category.id)
+  const articles = allArticles.filter((article) =>
+    article.relatedCategoryId === category.id || 
+    article.relatedCategoryId === category.slug
   );
-  const mapNodes = getMapNodes();
-  const nodeMatches = category.group === 'ecosystem'
-    ? mapNodes.filter((node) => node.kind === 'project' && node.categoryId === category.id)
-    : mapNodes.filter((node) => category.relatedNodeIds?.includes(node.id));
-  const relatedNodes = Array.from(
-    new Map(
-      [...nodeMatches].map((node) => [node.id, node])
-    ).values()
-  );
-  const overviewArticle = getKnowledgeArticleBySlug('ecosystem-overview');
+  
+  const overviewArticle = await getKnowledgeArticleBySlug('ecosystem-overview');
 
   return (
     <KnowledgePageFrame
-      eyebrow={`CATEGORY // ${category.group.toUpperCase()}`}
+      eyebrow={`CATEGORY // ${(category.group || 'atlas').toUpperCase()}`}
       title={category.title}
       summary={category.summary}
       statusLabel={category.group === 'ecosystem' ? 'TERRITORY_GUIDE_READY' : 'REFERENCE_GUIDE_READY'}
@@ -80,7 +77,7 @@ export default function CategoryPage({ params }: CategoryPageProps) {
             ARTICLES // {articles.length}
           </div>
           <div className="rounded-[1rem] border border-outline-variant/25 bg-surface-container-lowest/70 px-4 py-3">
-            RELATED_NODES // {relatedNodes.length}
+            STATUS // LIVE
           </div>
         </>
       }
@@ -88,11 +85,11 @@ export default function CategoryPage({ params }: CategoryPageProps) {
       <section className="console-window col-span-12">
         <div className="console-header">
           <span>MODULE_09: CATEGORY_BRIEFING</span>
-          <span className="text-primary">{category.prefix}_ACTIVE</span>
+          <span className="text-primary">{(category.prefix || 'CAT').toUpperCase()}_ACTIVE</span>
         </div>
         <div className="grid gap-6 p-6 lg:grid-cols-[minmax(0,1fr)_18rem]">
           <div className="space-y-4">
-            {category.bodySections.map((section) => (
+            {(category.bodySections || []).map((section) => (
               <article
                 key={section.title}
                 className="rounded-[1.4rem] border border-outline-variant/25 bg-surface-container-lowest p-5"
@@ -101,8 +98,8 @@ export default function CategoryPage({ params }: CategoryPageProps) {
                   {section.title}
                 </div>
                 <div className="space-y-4 text-sm leading-7 text-on-surface-variant">
-                  {section.body.split('\n\n').map((paragraph) => (
-                    <p key={paragraph}>{paragraph}</p>
+                  {(section.body || '').split('\n\n').map((paragraph, i) => (
+                    <p key={i}>{paragraph}</p>
                   ))}
                 </div>
               </article>
@@ -121,10 +118,10 @@ export default function CategoryPage({ params }: CategoryPageProps) {
                   Back to Encyclopedia
                 </Link>
                 <Link
-                  href="/map"
+                  href="/ecosystem"
                   className="block rounded-[1rem] border border-primary/30 bg-primary/10 px-4 py-3 text-primary transition-colors hover:bg-primary/20"
                 >
-                  Open Atlas Map
+                  Explore Ecosystem
                 </Link>
                 {overviewArticle ? (
                   <Link
@@ -141,7 +138,7 @@ export default function CategoryPage({ params }: CategoryPageProps) {
                 Scope
               </div>
               <p className="text-sm leading-7 text-on-surface-variant">
-                {category.description}
+                {category.summary}
               </p>
             </div>
           </aside>
@@ -167,27 +164,6 @@ export default function CategoryPage({ params }: CategoryPageProps) {
                 title={article.title}
                 summary={article.summary}
                 meta={article.date || 'Guide'}
-              />
-            ))}
-          </div>
-        </section>
-      )}
-
-      {relatedNodes.length > 0 && (
-        <section className="console-window col-span-12">
-          <div className="console-header">
-            <span>MODULE_11: RELATED_NODES</span>
-            <span className="text-primary">MAP_CONTEXT_ONLINE</span>
-          </div>
-          <div className="grid gap-4 p-4 md:grid-cols-2 xl:grid-cols-3">
-            {relatedNodes.map((node) => (
-              <KnowledgeRecordCard
-                key={node.id}
-                action={node.action || { type: 'internal', href: '/map', label: 'Open Atlas' }}
-                tag={node.tag}
-                title={node.label}
-                summary={node.beginnerDescription}
-                meta={node.kind}
               />
             ))}
           </div>

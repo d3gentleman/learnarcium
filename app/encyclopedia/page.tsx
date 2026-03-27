@@ -1,21 +1,28 @@
 import type { Metadata } from 'next';
 import KnowledgePageFrame from '@/components/KnowledgePageFrame';
 import KnowledgeRecordCard from '@/components/KnowledgeRecordCard';
-import { getKnowledgeArticlePath, getKnowledgeCategoryPath } from '@/data/knowledge-content';
-import { getKnowledgeArticles, getKnowledgeCategories } from '@/lib/content';
+import { 
+    getKnowledgeArticles, 
+    getKnowledgeCategories,
+    getKnowledgeArticlePath,
+    getKnowledgeCategoryPath
+} from '@/lib/content';
 
 export const metadata: Metadata = {
   title: 'Encyclopedia | ARCIUM ATLAS',
   description: 'Browse category pages, guides, and recent articles for the Arcium Atlas knowledge base.',
 };
 
-export default function EncyclopediaPage() {
-  const categories = getKnowledgeCategories();
+export default async function EncyclopediaPage() {
+  const [categories, articles] = await Promise.all([
+    getKnowledgeCategories(),
+    getKnowledgeArticles()
+  ]);
+
   const knowledgeCategories = categories.filter((category) => category.group === 'knowledge');
   const ecosystemTerritories = categories.filter((category) => category.group === 'ecosystem');
-  const articles = getKnowledgeArticles();
   const guides = articles.filter((article) => article.kind === 'guide');
-  const updates = articles.filter((article) => article.kind === 'update');
+  const updates = articles.filter((article) => article.kind === 'update' || article.kind === 'article');
 
   return (
     <KnowledgePageFrame
@@ -36,7 +43,7 @@ export default function EncyclopediaPage() {
             ARTICLES // {articles.length}
           </div>
           <div className="rounded-[1rem] border border-outline-variant/25 bg-surface-container-lowest/70 px-4 py-3">
-            MAP LINK // /map
+            ECOSYSTEM // /ecosystem
           </div>
         </>
       }
@@ -90,7 +97,7 @@ export default function EncyclopediaPage() {
       <section className="console-window col-span-12">
         <div className="console-header">
           <span>MODULE_07: ECOSYSTEM_TERRITORIES</span>
-          <span className="text-primary">MAP_CONNECTED</span>
+          <span className="text-primary">DIRECTORY_CONNECTED</span>
         </div>
         <div className="grid gap-4 p-4 md:grid-cols-2 xl:grid-cols-3">
           {ecosystemTerritories.map((category) => (
@@ -105,7 +112,7 @@ export default function EncyclopediaPage() {
               title={category.title}
               summary={category.summary}
               eyebrow={category.prefix}
-              meta="Map"
+              meta="Ecosystem"
             />
           ))}
         </div>
@@ -128,7 +135,7 @@ export default function EncyclopediaPage() {
               tag={article.tag}
               title={article.title}
               summary={article.summary}
-              meta={article.date}
+              meta={article.date || 'Article'}
             />
           ))}
         </div>

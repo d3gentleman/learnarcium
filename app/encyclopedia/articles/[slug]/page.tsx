@@ -3,12 +3,12 @@ import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import KnowledgePageFrame from '@/components/KnowledgePageFrame';
 import KnowledgeRecordCard from '@/components/KnowledgeRecordCard';
-import { getKnowledgeCategoryPath } from '@/data/knowledge-content';
 import {
   getKnowledgeArticleBySlug,
   getKnowledgeArticles,
   getKnowledgeCategoryById,
-  getMapNodes,
+  getKnowledgeCategoryPath,
+  getKnowledgeArticlePath
 } from '@/lib/content';
 
 interface ArticlePageProps {
@@ -17,14 +17,15 @@ interface ArticlePageProps {
   };
 }
 
-export function generateStaticParams() {
-  return getKnowledgeArticles().map((article) => ({
+export async function generateStaticParams() {
+  const articles = await getKnowledgeArticles();
+  return articles.map((article) => ({
     slug: article.slug,
   }));
 }
 
-export function generateMetadata({ params }: ArticlePageProps): Metadata {
-  const article = getKnowledgeArticleBySlug(params.slug);
+export async function generateMetadata({ params }: ArticlePageProps): Promise<Metadata> {
+  const article = await getKnowledgeArticleBySlug(params.slug);
 
   if (!article) {
     return {
@@ -38,18 +39,19 @@ export function generateMetadata({ params }: ArticlePageProps): Metadata {
   };
 }
 
-export default function ArticlePage({ params }: ArticlePageProps) {
-  const article = getKnowledgeArticleBySlug(params.slug);
+export default async function ArticlePage({ params }: ArticlePageProps) {
+  const article = await getKnowledgeArticleBySlug(params.slug);
 
   if (!article) {
     notFound();
   }
 
-  const relatedCategory = article.relatedCategoryId
-    ? getKnowledgeCategoryById(article.relatedCategoryId)
-    : undefined;
-  const relatedNodes = getMapNodes().filter((node) => article.relatedNodeIds?.includes(node.id));
-  const siblingArticles = getKnowledgeArticles()
+  const [relatedCategory, allArticles] = await Promise.all([
+    article.relatedCategoryId ? getKnowledgeCategoryById(article.relatedCategoryId) : Promise.resolve(null),
+    getKnowledgeArticles()
+  ]);
+
+  const siblingArticles = allArticles
     .filter((candidate) => candidate.id !== article.id && candidate.relatedCategoryId === article.relatedCategoryId)
     .slice(0, 3);
 
@@ -62,7 +64,7 @@ export default function ArticlePage({ params }: ArticlePageProps) {
       breadcrumbs={[
         { label: 'Home', href: '/' },
         { label: 'Encyclopedia', href: '/encyclopedia' },
-        { label: article.title, href: `/encyclopedia/articles/${article.slug}` },
+        { label: article.title, href: getKnowledgeArticlePath(article.slug) },
       ]}
       meta={
         <>
@@ -73,7 +75,7 @@ export default function ArticlePage({ params }: ArticlePageProps) {
             DATE // {article.date || 'REFERENCE'}
           </div>
           <div className="rounded-[1rem] border border-outline-variant/25 bg-surface-container-lowest/70 px-4 py-3">
-            RELATED_NODES // {relatedNodes.length}
+            STATUS // LIVE
           </div>
         </>
       }
@@ -94,8 +96,8 @@ export default function ArticlePage({ params }: ArticlePageProps) {
                   {section.title}
                 </div>
                 <div className="space-y-4 text-sm leading-7 text-on-surface-variant">
-                  {section.body.split('\n\n').map((paragraph) => (
-                    <p key={paragraph}>{paragraph}</p>
+                  {section.body.split('\n\n').map((paragraph, i) => (
+                    <p key={i}>{paragraph}</p>
                   ))}
                 </div>
               </article>
@@ -114,10 +116,10 @@ export default function ArticlePage({ params }: ArticlePageProps) {
                   Back to Encyclopedia
                 </Link>
                 <Link
-                  href="/map"
+                  href="/ecosystem"
                   className="block rounded-[1rem] border border-primary/30 bg-primary/10 px-4 py-3 text-primary transition-colors hover:bg-primary/20"
                 >
-                  Open Atlas Map
+                  Open Ecosystem
                 </Link>
                 {relatedCategory ? (
                   <Link
@@ -144,27 +146,6 @@ export default function ArticlePage({ params }: ArticlePageProps) {
         </div>
       </section>
 
-      {relatedNodes.length > 0 && (
-        <section className="console-window col-span-12">
-          <div className="console-header">
-            <span>MODULE_13: REFERENCED_NODES</span>
-            <span className="text-primary">ATLAS_SYNCED</span>
-          </div>
-          <div className="grid gap-4 p-4 md:grid-cols-2 xl:grid-cols-3">
-            {relatedNodes.map((node) => (
-              <KnowledgeRecordCard
-                key={node.id}
-                action={node.action || { type: 'internal', href: '/map', label: 'Open Atlas' }}
-                tag={node.tag}
-                title={node.label}
-                summary={node.beginnerDescription}
-                meta={node.kind}
-              />
-            ))}
-          </div>
-        </section>
-      )}
-
       {siblingArticles.length > 0 && (
         <section className="console-window col-span-12">
           <div className="console-header">
@@ -177,7 +158,7 @@ export default function ArticlePage({ params }: ArticlePageProps) {
                 key={candidate.id}
                 action={{
                   type: 'internal',
-                  href: `/encyclopedia/articles/${candidate.slug}`,
+                  href: getKnowledgeArticlePath(candidate.slug),
                   label: candidate.kind === 'guide' ? 'Read Guide' : 'Read Article',
                 }}
                 tag={candidate.tag}

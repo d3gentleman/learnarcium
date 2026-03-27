@@ -1,5 +1,12 @@
 import ActionLink from './ActionLink';
-import { StartHereCard } from '../types/domain';
+
+interface StartHereCard {
+  prefix: string;
+  tag: string;
+  title: string;
+  description: string;
+  action: any;
+}
 
 export default function StartHereSection({ cards }: { cards: StartHereCard[] }) {
   return (
@@ -10,7 +17,7 @@ export default function StartHereSection({ cards }: { cards: StartHereCard[] }) 
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
-        {cards.map((card, idx) => (
+        {(cards || []).map((card, idx) => (
           <div
             key={idx}
             className={`p-8 hover:bg-primary/5 transition-all group relative overflow-hidden ${idx !== cards.length - 1 ? 'md:border-r-2 md:border-outline-variant/30' : ''}`}

@@ -43,7 +43,7 @@ export interface KnowledgeArticleRecord {
   tag: string;
   summary: string;
   bodySections: BodySection[];
-  kind: 'guide' | 'update';
+  kind: 'guide' | 'update' | 'article';
   date?: string;
   relatedCategoryId: string;
 }
@@ -75,4 +75,19 @@ export interface EcosystemProjectRecord {
   status: 'sync_ok' | 'coming_soon' | 'maintenance';
   categoryId: string;
   isFeatured: boolean;
+}
+
+export type DiscoveryItemKind = 'core' | 'project' | 'category' | 'glossary' | 'article';
+
+export interface DiscoveryItem {
+  id: string;
+  kind: DiscoveryItemKind;
+  title: string;
+  summary: string;
+  tag: string;
+  href: string;
+  eyebrow: string;
+  priority: 'high' | 'medium' | 'low';
+  featured: boolean;
+  keywords: string[];
 }

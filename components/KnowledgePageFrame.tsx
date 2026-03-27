@@ -3,6 +3,7 @@ import type { ReactNode } from 'react';
 import Footer from './Footer';
 import NavBar from './NavBar';
 import { getFooterConfig, getNavigation } from '@/lib/content';
+import { LinkAction, FooterConfig } from '../types/domain';
 
 interface Breadcrumb {
   label: string;
@@ -19,7 +20,7 @@ interface KnowledgePageFrameProps {
   children: ReactNode;
 }
 
-export default function KnowledgePageFrame({
+export default async function KnowledgePageFrame({
   eyebrow,
   title,
   summary,
@@ -28,8 +29,8 @@ export default function KnowledgePageFrame({
   meta,
   children,
 }: KnowledgePageFrameProps) {
-  const navLinks = getNavigation();
-  const footerConfig = getFooterConfig();
+  const navLinks: LinkAction[] = await getNavigation();
+  const footerConfig: FooterConfig = await getFooterConfig();
 
   return (
     <>
@@ -55,7 +56,7 @@ export default function KnowledgePageFrame({
             )}
             <div>
               <div className="mb-4 text-[10px] font-bold uppercase tracking-[0.24em] text-primary">{eyebrow}</div>
-              <h1 className="max-w-4xl text-4xl font-black uppercase tracking-tight text-white md:text-6xl">
+              <h1 className="max-w-4xl text-4xl font-black uppercase tracking-tight text-white md:text-6xl text-wrap break-words">
                 {title}
               </h1>
             </div>
@@ -63,7 +64,7 @@ export default function KnowledgePageFrame({
               {summary}
             </p>
           </div>
-          <aside className="rounded-[1.5rem] border border-outline-variant/25 bg-black/25 p-5 shadow-inner backdrop-blur-sm">
+          <aside className="rounded-[1.5rem] border border-outline-variant/25 bg-black/25 p-5 shadow-inner backdrop-blur-sm h-fit">
             <div className="mb-3 text-[10px] font-bold uppercase tracking-[0.24em] text-primary/80">
               Context
             </div>
