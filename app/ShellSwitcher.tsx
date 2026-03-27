@@ -1,3 +1,7 @@
+'use client';
+
+import { usePathname } from 'next/navigation';
+import DiscoveryShell from '@/components/DiscoveryShell';
 import { DiscoveryItem, UIConfig } from '@/types/domain';
 
 interface ShellSwitcherProps {
