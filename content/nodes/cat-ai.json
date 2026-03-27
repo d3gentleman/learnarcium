@@ -1,0 +1,18 @@
+{
+  "id": "cat-ai",
+  "kind": "category",
+  "label": "Artificial Intelligence",
+  "technicalLabel": "PRIVATE INFERENCE SYSTEMS",
+  "compactLabel": "AI",
+  "tag": "COMPUTE_LAYER",
+  "beginnerDescription": "AI bots and models that can process sensitive information without exposing the raw data.",
+  "technicalDescription": "AI bots and models that can process sensitive information without exposing the raw data. Confidential AI is one of the clearest proofs of utility for Arcium: private prompts, secure inference, and encrypted model execution.",
+  "whyItMatters": "Confidential AI is one of the clearest proofs of utility for Arcium: private prompts, secure inference, and encrypted model execution.",
+  "priority": "high",
+  "featuredOnOverview": false,
+  "action": {
+    "type": "internal",
+    "href": "/encyclopedia/categories/artificial-intelligence",
+    "label": "Open category guide"
+  }
+}

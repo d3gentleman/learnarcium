@@ -1,0 +1,20 @@
+{
+  "id": "proj-ionet",
+  "kind": "project",
+  "label": "io.net",
+  "technicalLabel": "io.net DePIN Compute",
+  "compactLabel": "io.net",
+  "tag": "DEPIN",
+  "beginnerDescription": "A decentralized cloud computing network.",
+  "technicalDescription": "Aggregates global GPU supply while Arcium provides secure execution surfaces for private inference workloads.",
+  "whyItMatters": "It shows how confidential execution can plug into broader compute marketplaces rather than living in isolation.",
+  "priority": "medium",
+  "featuredOnOverview": false,
+  "categoryId": "cat-ai",
+  "logoUrl": "/logos/ionet.png",
+  "action": {
+    "type": "external",
+    "href": "https://io.net",
+    "label": "Visit Project"
+  }
+}

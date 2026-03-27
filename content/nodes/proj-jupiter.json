@@ -1,0 +1,20 @@
+{
+  "id": "proj-jupiter",
+  "kind": "project",
+  "label": "Jupiter",
+  "technicalLabel": "Jupiter DEX Router",
+  "compactLabel": "Jupiter",
+  "tag": "DEX_AGGREGATOR",
+  "beginnerDescription": "A popular trading platform minimizing price impact.",
+  "technicalDescription": "Integrating Arcium to reduce MEV exposure and enable confidential routing across Solana liquidity sources.",
+  "whyItMatters": "It is a familiar consumer-facing trading product, so it makes the DeFi privacy story legible immediately.",
+  "priority": "high",
+  "featuredOnOverview": true,
+  "categoryId": "cat-defi",
+  "logoUrl": "/logos/jupiter.png",
+  "action": {
+    "type": "external",
+    "href": "https://jup.ag",
+    "label": "Visit App"
+  }
+}

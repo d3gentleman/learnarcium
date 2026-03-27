@@ -1,0 +1,19 @@
+{
+  "id": "proj-ellisium",
+  "kind": "project",
+  "label": "Ellisium",
+  "technicalLabel": "Ellisium Dark Pool",
+  "compactLabel": "Ellisium",
+  "tag": "DARK_POOL",
+  "beginnerDescription": "A secure trading platform hiding large orders from the public.",
+  "technicalDescription": "A privacy-preserving dark pool concept shielding order intent, trade size, and execution details.",
+  "whyItMatters": "Dark pool design makes the case for confidential execution concrete, even before the product is fully live.",
+  "priority": "low",
+  "featuredOnOverview": false,
+  "categoryId": "cat-defi",
+  "action": {
+    "type": "unavailable",
+    "label": "Coming Soon",
+    "reason": "This project is not yet live."
+  }
+}

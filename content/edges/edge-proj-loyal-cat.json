@@ -1,0 +1,8 @@
+{
+  "id": "edge-proj-loyal-cat",
+  "sourceId": "proj-loyal",
+  "targetId": "cat-ai",
+  "relationKind": "belongs_to",
+  "beginnerCaption": "Private agent execution",
+  "technicalCaption": "Uses Arcium to secure prompts, memory, and agent output handling"
+}

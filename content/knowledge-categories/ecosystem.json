@@ -1,0 +1,20 @@
+{
+  "id": "enc-eco",
+  "slug": "ecosystem",
+  "title": "Ecosystem",
+  "tag": "/KNOWLEDGE_BASE/ECO_V2.0",
+  "summary": "A guided view of the projects, product patterns, and market categories that make Arcium tangible.",
+  "description": "Guides, tutorials, and deep-dives on deploying and integrating with the Arcium network.",
+  "prefix": "EC",
+  "group": "knowledge",
+  "bodySections": [
+    {
+      "title": "What Lives Here",
+      "body": "Ecosystem content is the bridge between theory and product. It shows where confidential compute appears in real user journeys: swaps, inference, wallet security, prediction systems, and consumer-facing applications."
+    },
+    {
+      "title": "Why It Matters",
+      "body": "An ecosystem map only becomes useful when the territories are connected to explanations. This category helps readers move from node exploration to clearer mental models of what each product area is trying to accomplish on top of Arcium."
+    }
+  ]
+}

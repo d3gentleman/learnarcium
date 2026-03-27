@@ -1,0 +1,20 @@
+{
+  "id": "proj-squads",
+  "kind": "project",
+  "label": "Squads",
+  "technicalLabel": "Squads MPC Wallet",
+  "compactLabel": "Squads",
+  "tag": "MULTISIG",
+  "beginnerDescription": "A platform for teams to manage their crypto assets together.",
+  "technicalDescription": "Wallet infrastructure using Arcium for trust-minimized key sharding, recovery, and controlled execution flows.",
+  "whyItMatters": "Wallet infrastructure gives Arcium a clear path into real user security flows, not just abstract privacy primitives.",
+  "priority": "high",
+  "featuredOnOverview": true,
+  "categoryId": "cat-payments",
+  "logoUrl": "/logos/squads.png",
+  "action": {
+    "type": "external",
+    "href": "https://squads.so",
+    "label": "Visit Project"
+  }
+}

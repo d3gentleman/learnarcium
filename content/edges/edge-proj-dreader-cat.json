@@ -1,0 +1,8 @@
+{
+  "id": "edge-proj-dreader-cat",
+  "sourceId": "proj-dreader",
+  "targetId": "cat-consumer",
+  "relationKind": "belongs_to",
+  "beginnerCaption": "Private reading history",
+  "technicalCaption": "Protects user behavior and access logic for digital publishing"
+}

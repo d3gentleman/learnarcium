@@ -1,0 +1,19 @@
+{
+  "id": "proj-epoch",
+  "kind": "project",
+  "label": "Epochdotm",
+  "technicalLabel": "Epoch Prediction Engine",
+  "compactLabel": "Epoch",
+  "tag": "PREDICTION_MARKET",
+  "beginnerDescription": "A private prediction market to forecast events.",
+  "technicalDescription": "Leverages transaction confidentiality to obscure trader positions, market depth, and participant behavior.",
+  "whyItMatters": "Prediction markets become more useful when participation does not automatically leak conviction and timing.",
+  "priority": "medium",
+  "featuredOnOverview": false,
+  "categoryId": "cat-prediction",
+  "action": {
+    "type": "unavailable",
+    "label": "Coming Soon",
+    "reason": "This project is not yet live."
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "id": "eco-test",
+  "slug": "eco-test",
+  "title": "Test",
+  "tag": "test",
+  "summary": "Test. Test. Test. Test. Test. Test. Test. Test. Test. Test. Test. Test. **Test.**",
+  "website": "https://test.com",
+  "status": "sync_ok",
+  "categoryId": "payments-wallets",
+  "isFeatured": false
+}

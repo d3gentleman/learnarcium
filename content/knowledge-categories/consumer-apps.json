@@ -1,0 +1,20 @@
+{
+  "id": "cat-consumer",
+  "slug": "consumer-apps",
+  "title": "Consumer Apps",
+  "tag": "UX_LAYER",
+  "summary": "Consumer products are where privacy stops being an abstract property and becomes part of ordinary user experience.",
+  "description": "Everyday applications offering private identities and secure interactions.",
+  "prefix": "CA",
+  "group": "ecosystem",
+  "bodySections": [
+    {
+      "title": "Invisible Privacy",
+      "body": "Consumer applications benefit from confidentiality when the protection feels natural instead of ceremonial. Messaging, reading history, local-first communication, or identity-sensitive flows all improve when privacy is built into the system rather than bolted on at the edges."
+    },
+    {
+      "title": "Atlas Reading",
+      "body": "This territory broadens the story the atlas can tell. It shows that Arcium is not only for protocol engineers or market operators; it can also sit underneath products that ordinary users interact with every day."
+    }
+  ]
+}

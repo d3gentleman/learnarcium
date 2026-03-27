@@ -1,0 +1,8 @@
+{
+  "id": "edge-proj-ellisium-cat",
+  "sourceId": "proj-ellisium",
+  "targetId": "cat-defi",
+  "relationKind": "belongs_to",
+  "beginnerCaption": "Dark pool concept",
+  "technicalCaption": "Designs hidden order books and shielded execution paths"
+}

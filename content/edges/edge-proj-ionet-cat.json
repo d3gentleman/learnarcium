@@ -1,0 +1,8 @@
+{
+  "id": "edge-proj-ionet-cat",
+  "sourceId": "proj-ionet",
+  "targetId": "cat-ai",
+  "relationKind": "belongs_to",
+  "beginnerCaption": "Secure cloud inference",
+  "technicalCaption": "Pairs distributed GPU supply with Arcium-protected execution surfaces"
+}

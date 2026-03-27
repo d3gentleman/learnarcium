@@ -1,0 +1,19 @@
+{
+  "id": "guide-understanding-arcium",
+  "slug": "understanding-arcium",
+  "title": "Understanding Arcium",
+  "tag": "START_HERE",
+  "summary": "A concise overview of Arcium as a confidential execution layer and why it matters across the rest of the atlas.",
+  "kind": "guide",
+  "relatedCategoryId": "enc-eco",
+  "bodySections": [
+    {
+      "title": "Core Idea",
+      "body": "Arcium is presented throughout this project as the privacy layer of Web3: an execution environment where applications can process sensitive inputs without exposing them to a single operator or to the wider network. The atlas uses that premise as the lens for every map region and product node."
+    },
+    {
+      "title": "How to Use This Atlas",
+      "body": "Start with the ecosystem map if you want breadth, then use the encyclopedia routes to deepen the model. The map shows where confidential compute appears. The articles and category pages explain why those connections matter and what kinds of products become possible when data can remain private during execution."
+    }
+  ]
+}

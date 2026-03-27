@@ -1,0 +1,22 @@
+{
+  "id": "glossary-execution-workflow",
+  "slug": "execution-workflow",
+  "term": "Execution Workflow",
+  "tag": "WORKFLOW",
+  "summary": "The execution workflow is the ordered path a computation follows once it enters an MXE, from readiness checks through collaborative processing and output delivery.",
+  "aliases": [],
+  "keywords": [
+    "readiness check",
+    "processing",
+    "output",
+    "execution flow"
+  ],
+  "priority": "medium",
+  "source": {
+    "label": "Arcium Docs: Execution Workflow",
+    "href": "https://docs.arcium.com/multi-party-execution-environments-mxes/overview/execution-workflow"
+  },
+  "relatedCategoryIds": [
+    "enc-infra"
+  ]
+}

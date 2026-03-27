@@ -1,0 +1,22 @@
+{
+  "id": "glossary-trustless-execution",
+  "slug": "trustless-execution",
+  "term": "Trustless Execution",
+  "tag": "SECURITY_MODEL",
+  "summary": "Trustless execution refers to computations being carried out so users do not have to rely on a single operator or institution to believe the result.",
+  "aliases": [],
+  "keywords": [
+    "verification",
+    "security model",
+    "operator trust"
+  ],
+  "priority": "medium",
+  "source": {
+    "label": "Arcium Docs: Trustless Execution",
+    "href": "https://docs.arcium.com/introduction/basic-concepts/trustless-execution"
+  },
+  "relatedCategoryIds": [
+    "enc-comp",
+    "enc-crypto"
+  ]
+}

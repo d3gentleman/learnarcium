@@ -1,0 +1,18 @@
+{
+  "id": "cat-payments",
+  "kind": "category",
+  "label": "Payments & Wallets",
+  "technicalLabel": "MPC WALLET INFRA",
+  "compactLabel": "Payments",
+  "tag": "INFRASTRUCTURE",
+  "beginnerDescription": "Tools to send crypto privately and manage wallet security safely.",
+  "technicalDescription": "Tools to send crypto privately and manage wallet security safely. Payment and wallet infrastructure benefit from Arcium by pushing key management, signing, and transaction logic into confidential execution.",
+  "whyItMatters": "Payment and wallet infrastructure benefit from Arcium by pushing key management, signing, and transaction logic into confidential execution.",
+  "priority": "high",
+  "featuredOnOverview": false,
+  "action": {
+    "type": "internal",
+    "href": "/encyclopedia/categories/payments-wallets",
+    "label": "Open category guide"
+  }
+}

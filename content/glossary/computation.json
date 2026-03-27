@@ -1,0 +1,25 @@
+{
+  "id": "glossary-computation",
+  "slug": "computation",
+  "term": "Computation",
+  "tag": "WORKFLOW",
+  "summary": "In Arcium, a computation is the unit of work that progresses from definition to execution and completion across the network.",
+  "aliases": [
+    "Arcium Computation"
+  ],
+  "keywords": [
+    "job",
+    "execution request",
+    "lifecycle",
+    "workflow"
+  ],
+  "priority": "medium",
+  "source": {
+    "label": "Arcium Docs: Lifecycle of an Arcium Computation",
+    "href": "https://docs.arcium.com/computations/lifecycle-of-an-arcium-computation/lifecycle-of-an-arcium-computation"
+  },
+  "relatedCategoryIds": [
+    "enc-infra",
+    "enc-eco"
+  ]
+}

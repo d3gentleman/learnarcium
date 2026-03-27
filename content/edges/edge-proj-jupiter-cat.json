@@ -1,0 +1,8 @@
+{
+  "id": "edge-proj-jupiter-cat",
+  "sourceId": "proj-jupiter",
+  "targetId": "cat-defi",
+  "relationKind": "belongs_to",
+  "beginnerCaption": "Private swap routing",
+  "technicalCaption": "Uses Arcium to reduce MEV exposure and conceal routing intent"
+}

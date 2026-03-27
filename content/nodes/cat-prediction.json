@@ -1,0 +1,18 @@
+{
+  "id": "cat-prediction",
+  "kind": "category",
+  "label": "Prediction Markets",
+  "technicalLabel": "ENCRYPTED INFORMATION MARKETS",
+  "compactLabel": "Prediction",
+  "tag": "INFORMATION_LAYER",
+  "beginnerDescription": "Platforms to bet on future events without revealing your positions to the public.",
+  "technicalDescription": "Platforms to bet on future events without revealing your positions to the public. Prediction markets become more credible when traders can commit capital without leaking their thesis to the rest of the market.",
+  "whyItMatters": "Prediction markets become more credible when traders can commit capital without leaking their thesis to the rest of the market.",
+  "priority": "medium",
+  "featuredOnOverview": false,
+  "action": {
+    "type": "internal",
+    "href": "/encyclopedia/categories/prediction-markets",
+    "label": "Open category guide"
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "id": "cat-consumer",
+  "kind": "category",
+  "label": "Consumer Apps",
+  "technicalLabel": "PRIVATE USER EXPERIENCES",
+  "compactLabel": "Consumer",
+  "tag": "UX_LAYER",
+  "beginnerDescription": "Everyday applications offering private identities and secure interactions.",
+  "technicalDescription": "Everyday applications offering private identities and secure interactions. Consumer apps need privacy that feels invisible. Arcium turns sensitive user flows into secure background infrastructure.",
+  "whyItMatters": "Consumer apps need privacy that feels invisible. Arcium turns sensitive user flows into secure background infrastructure.",
+  "priority": "medium",
+  "featuredOnOverview": false,
+  "action": {
+    "type": "internal",
+    "href": "/encyclopedia/categories/consumer-apps",
+    "label": "Open category guide"
+  }
+}

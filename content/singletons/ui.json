@@ -1,0 +1,52 @@
+{
+  "navigation": [
+    {
+      "type": "internal",
+      "label": "Map",
+      "href": "/map"
+    },
+    {
+      "type": "internal",
+      "label": "Encyclopedia",
+      "href": "/encyclopedia"
+    },
+    {
+      "type": "internal",
+      "label": "Glossary",
+      "href": "/glossary"
+    },
+    {
+      "type": "unavailable",
+      "label": "Infrastructure",
+      "reason": "Infrastructure guides are not published yet."
+    },
+    {
+      "type": "unavailable",
+      "label": "About",
+      "reason": "About page is not published yet."
+    }
+  ],
+  "categoryColors": [
+    {
+      "categoryId": "cat-defi",
+      "color": "#00FFA3"
+    },
+    {
+      "categoryId": "cat-ai",
+      "color": "#00E0FF"
+    },
+    {
+      "categoryId": "cat-payments",
+      "color": "#FFC700"
+    },
+    {
+      "categoryId": "cat-consumer",
+      "color": "#FF00E5"
+    },
+    {
+      "categoryId": "cat-prediction",
+      "color": "#B200FF"
+    }
+  ],
+  "uiStringsJson": "{\n  \"mapPanelHeader\": \"NODE_DATA\",\n  \"mapBeginnerToggle\": \"Beginner\",\n  \"mapTechnicalToggle\": \"Technical\",\n  \"mapClose\": \"Close Panel\",\n  \"mapReadArticle\": \"Read Full Article →\",\n  \"mapSpecTechnical\": \"Technical_Spec\",\n  \"mapSpecOverview\": \"Overview\",\n  \"mapPanelOverviewTitle\": \"Overview\",\n  \"mapPanelWhyItMatters\": \"Why It Matters\",\n  \"mapPanelTechnicalTitle\": \"Technical Detail\",\n  \"mapPanelActionTitle\": \"Action\",\n  \"mapTechnicalHint\": \"Switch to technical mode to reveal implementation detail, protocol language, and relationship semantics.\",\n  \"heroControlEXE\": \"CONTROL_UNIT.EXE\",\n  \"heroArchivistID\": \"ID: ARCHIVIST_01\",\n  \"heroNavShortcuts\": \"Navigation_Shortcuts\",\n  \"heroLiveStatus\": \"LIVE_STATUS_FEED:\",\n  \"heroWaitingQuery\": \"_WAITING_FOR_QUERY...\",\n  \"heroSysTools\": \"System_Tools:\",\n  \"heroGenReport\": \"Generate_System_Report\",\n  \"heroViewport\": \"VIEWPORT_PRIMARY: ECOSYSTEM_ATLAS\",\n  \"heroMode\": \"MODE: INTERACTIVE_MAPPING\",\n  \"heroRenderActive\": \"REALTIME_RENDER_ACTIVE\",\n  \"heroZoom\": \"ZOOM: 1.0X\",\n  \"heroAtlasTerritories\": \"Territories\",\n  \"heroFeaturedSystems\": \"Featured Systems\",\n  \"filterLegendDesc\": \"ACTIVE_FILTERS\",\n  \"filterAllStr\": \"View All\",\n  \"legendHeader\": \"SYSTEM_LEGEND\",\n  \"searchPlaceholder\": \"Search protocols...\",\n  \"mapSearchResults\": \"Matching Systems\",\n  \"mapSearchNoResults\": \"No systems match this query yet.\",\n  \"mapOverviewState\": \"Atlas Overview\",\n  \"mapFocusState\": \"Focused Territory\",\n  \"backToAtlas\": \"← Back to Hub\",\n  \"discoveryOpen\": \"Open Atlas Search\",\n  \"discoveryClose\": \"Close Search\",\n  \"discoverySearchPlaceholder\": \"Search builders, glossary terms, MXEs, and guides...\",\n  \"discoverySearchHint\": \"CTRL/CMD + K // ESC to close\",\n  \"discoveryInitialState\": \"Search Arcium builders, glossary terms, developer guides, and category pages.\",\n  \"discoveryNoResultsTitle\": \"No atlas records matched this query.\",\n  \"discoveryNoResultsBody\": \"Try a glossary term, builder, MXE topic, or category name.\",\n  \"discoveryGroupCore\": \"Core Network\",\n  \"discoveryGroupProjects\": \"Builders\",\n  \"discoveryGroupCategories\": \"Knowledge Areas\",\n  \"discoveryGroupGlossary\": \"Glossary Terms\",\n  \"discoveryGroupArticles\": \"Guides & Articles\",\n  \"discoveryOpenResult\": \"Open Record\",\n  \"discoverySecondaryAction\": \"Panel Action\",\n  \"mapExpandCategory\": \"Expand\",\n  \"mapCollapseCategory\": \"Close\",\n  \"mapEmptyState\": \"No projects match this filter.\",\n  \"mapTagFilter\": \"Filter by Tag\",\n  \"mapAllTags\": \"All Tags\",\n  \"mapAllCategories\": \"All Categories\",\n  \"mapProjectCount\": \"Projects\",\n  \"mapCoreStatusLabel\": \"NETWORK_STATUS:\",\n  \"mapCoreStatusValue\": \"SYNC_OK\",\n  \"mapOverviewTitle\": \"Ecosystem Overview\",\n  \"mapBackToOverview\": \"← Back to Overview\"\n}"
+}

@@ -1,0 +1,8 @@
+{
+  "id": "edge-proj-nosana-cat",
+  "sourceId": "proj-nosana",
+  "targetId": "cat-ai",
+  "relationKind": "belongs_to",
+  "beginnerCaption": "Confidential AI compute",
+  "technicalCaption": "Keeps datasets encrypted while running inference on decentralized GPUs"
+}

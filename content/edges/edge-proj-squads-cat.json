@@ -1,0 +1,8 @@
+{
+  "id": "edge-proj-squads-cat",
+  "sourceId": "proj-squads",
+  "targetId": "cat-payments",
+  "relationKind": "belongs_to",
+  "beginnerCaption": "Protected wallet workflows",
+  "technicalCaption": "Applies confidential execution to key sharding, approvals, and signing paths"
+}

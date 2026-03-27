@@ -1,0 +1,20 @@
+{
+  "id": "enc-infra",
+  "slug": "infrastructure",
+  "title": "Infrastructure",
+  "tag": "/KNOWLEDGE_BASE/ENC_V1.0",
+  "summary": "The runtime layer behind confidential execution: nodes, routing, orchestration, and the operational surfaces the network depends on.",
+  "description": "Deep dives into MPC Nodes, Enclaves, the Mempool, and the core routing architecture of Arcium.",
+  "prefix": "IN",
+  "group": "knowledge",
+  "bodySections": [
+    {
+      "title": "What Lives Here",
+      "body": "Infrastructure content explains how Arcium moves from abstract privacy guarantees to an actual operating network. It covers the execution surfaces, the movement of encrypted work across the system, and the components that let applications rely on confidential compute as a service."
+    },
+    {
+      "title": "Why It Matters",
+      "body": "This category is where builders connect product claims to system reality. If Arcium is going to support wallets, AI runtimes, or private market infrastructure, the underlying node and routing model has to be legible enough for developers to trust and integrate."
+    }
+  ]
+}

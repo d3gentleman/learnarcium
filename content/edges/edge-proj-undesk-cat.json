@@ -1,0 +1,8 @@
+{
+  "id": "edge-proj-undesk-cat",
+  "sourceId": "proj-undesk",
+  "targetId": "cat-defi",
+  "relationKind": "belongs_to",
+  "beginnerCaption": "Confidential OTC trading",
+  "technicalCaption": "Builds private block trade execution on Arcium-backed confidential flows"
+}

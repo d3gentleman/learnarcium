@@ -16,7 +16,7 @@ export default function NavBar({ links }: { links: LinkAction[] }) {
           [ARCIUM_ATLAS.V3]
         </div>
         <nav className="flex flex-wrap gap-6 text-xs uppercase font-bold tracking-widest">
-          {links.map((link, idx) => (
+          {links?.map((link, idx) => (
             <ActionLink
               key={idx}
               action={link}

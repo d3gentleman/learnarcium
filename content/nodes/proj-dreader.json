@@ -1,0 +1,20 @@
+{
+  "id": "proj-dreader",
+  "kind": "project",
+  "label": "dReader",
+  "technicalLabel": "dReader Publishing",
+  "compactLabel": "dReader",
+  "tag": "PUBLISHING",
+  "beginnerDescription": "A platform to read and publish comics.",
+  "technicalDescription": "Uses confidential execution to preserve private reading history and support secure content access patterns.",
+  "whyItMatters": "It broadens the map beyond finance and infrastructure into ordinary digital product behavior.",
+  "priority": "medium",
+  "featuredOnOverview": false,
+  "categoryId": "cat-consumer",
+  "logoUrl": "/logos/dreader.png",
+  "action": {
+    "type": "unavailable",
+    "label": "Coming Soon",
+    "reason": "This project is not yet live."
+  }
+}

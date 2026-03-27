@@ -1,0 +1,20 @@
+{
+  "id": "cat-payments",
+  "slug": "payments-wallets",
+  "title": "Payments & Wallets",
+  "tag": "INFRASTRUCTURE",
+  "summary": "Wallet coordination, signing, approvals, and payment flows are strongest when the operational logic remains confidential.",
+  "description": "Tools to send crypto privately and manage wallet security safely.",
+  "prefix": "PW",
+  "group": "ecosystem",
+  "bodySections": [
+    {
+      "title": "Operational Security",
+      "body": "Wallet infrastructure is an obvious proving ground for confidential execution because key workflows, approvals, and recovery logic all carry real operational risk. Arcium gives builders a way to keep those flows expressive without making them fully transparent."
+    },
+    {
+      "title": "Atlas Reading",
+      "body": "This territory is smaller in the current atlas, but it is strategically important. It shows how privacy can improve everyday product safety, not just specialized markets or advanced cryptographic demos."
+    }
+  ]
+}

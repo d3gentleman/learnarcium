@@ -175,3 +175,18 @@ export interface DiscoveryItem {
   secondaryAction?: LinkAction;
   featured?: boolean;
 }
+
+export type EcosystemProjectStatus = 'sync_ok' | 'coming_soon' | 'maintenance';
+
+export interface EcosystemProjectRecord {
+  id: string;
+  slug: string;
+  title: string;
+  tag: string;
+  summary: string;
+  logo: string | null;
+  website: string | null;
+  status: EcosystemProjectStatus;
+  categoryId: string;
+  isFeatured: boolean;
+}

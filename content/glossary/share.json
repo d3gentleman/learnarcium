@@ -1,0 +1,25 @@
+{
+  "id": "glossary-share",
+  "slug": "share",
+  "term": "Share",
+  "tag": "DATA_MODEL",
+  "summary": "A share is one fragment of a protected value after secret sharing; individual shares are useful for collaborative computation but not as raw plaintext on their own.",
+  "aliases": [
+    "Encrypted Share",
+    "Share Fragment"
+  ],
+  "keywords": [
+    "fragment",
+    "split data",
+    "private value"
+  ],
+  "priority": "medium",
+  "source": {
+    "label": "Arcium Docs: Overview of the Arcium Network",
+    "href": "https://docs.arcium.com/index/overview-of-the-arcium-network"
+  },
+  "relatedCategoryIds": [
+    "enc-crypto",
+    "enc-infra"
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "links": [
+    {
+      "type": "external",
+      "label": "Official Docs",
+      "href": "https://docs.arcium.com"
+    },
+    {
+      "type": "external",
+      "label": "X/Twitter",
+      "href": "https://twitter.com/ArciumHQ"
+    },
+    {
+      "type": "external",
+      "label": "Discord",
+      "href": "https://discord.gg/arcium"
+    }
+  ],
+  "metadata": {
+    "copyright": "(C) 2024 ARCIUM PROTOCOL_GROUP",
+    "coords": "LAT: 37.7749 // LONG: -122.4194 // CRC_HASH: 0x8842A_V3",
+    "mission": "--- MISSION_OBJECTIVE: DECENTRALIZE_THE_GRID ---"
+  }
+}

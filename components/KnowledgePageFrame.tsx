@@ -19,7 +19,7 @@ interface KnowledgePageFrameProps {
   children: ReactNode;
 }
 
-export default function KnowledgePageFrame({
+export default async function KnowledgePageFrame({
   eyebrow,
   title,
   summary,
@@ -28,8 +28,8 @@ export default function KnowledgePageFrame({
   meta,
   children,
 }: KnowledgePageFrameProps) {
-  const navLinks = getNavigation();
-  const footerConfig = getFooterConfig();
+  const navLinks = await getNavigation();
+  const footerConfig = await getFooterConfig();
 
   return (
     <>

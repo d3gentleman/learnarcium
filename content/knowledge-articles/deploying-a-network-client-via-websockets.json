@@ -1,0 +1,20 @@
+{
+  "id": "art-3",
+  "slug": "deploying-a-network-client-via-websockets",
+  "title": "Deploying a Network Client via WebSockets",
+  "tag": "TUTORIAL",
+  "summary": "An onboarding-oriented walkthrough framing how a client integration fits into the infrastructure side of the atlas.",
+  "kind": "update",
+  "date": "2024-10-15",
+  "relatedCategoryId": "enc-infra",
+  "bodySections": [
+    {
+      "title": "Client Perspective",
+      "body": "A deployment guide matters because it turns the atlas from a catalog into a workflow. Readers move from understanding what Arcium powers to understanding how a client might actually connect, subscribe, or exchange information with the network."
+    },
+    {
+      "title": "Why This Matters",
+      "body": "Even a concise tutorial changes the product shape of the site. It signals that the knowledge base is not only for browsing concepts; it can also become the starting point for builders who want to turn the map into implementation work."
+    }
+  ]
+}

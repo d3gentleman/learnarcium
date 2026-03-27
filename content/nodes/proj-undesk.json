@@ -1,0 +1,20 @@
+{
+  "id": "proj-undesk",
+  "kind": "project",
+  "label": "Undesk Trade",
+  "technicalLabel": "Undesk OTC Engine",
+  "compactLabel": "Undesk",
+  "tag": "OTC_DESK",
+  "beginnerDescription": "A private trading desk for large transactions.",
+  "technicalDescription": "A privacy-enabled OTC desk for confidential swaps and large order execution built on Arcium MXEs.",
+  "whyItMatters": "OTC execution is where confidential order handling has immediate value for users and market makers.",
+  "priority": "medium",
+  "featuredOnOverview": false,
+  "categoryId": "cat-defi",
+  "logoUrl": "/logos/undesk.png",
+  "action": {
+    "type": "external",
+    "href": "https://twitter.com/undesktrade",
+    "label": "Visit Project"
+  }
+}

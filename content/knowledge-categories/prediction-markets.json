@@ -1,0 +1,20 @@
+{
+  "id": "cat-prediction",
+  "slug": "prediction-markets",
+  "title": "Prediction Markets",
+  "tag": "INFORMATION_LAYER",
+  "summary": "Encrypted information markets matter because they let participants commit capital without broadcasting conviction or timing.",
+  "description": "Platforms to bet on future events without revealing your positions to the public.",
+  "prefix": "PM",
+  "group": "ecosystem",
+  "bodySections": [
+    {
+      "title": "Information as Product",
+      "body": "Prediction systems become more interesting when the market can hold information without instantly leaking it. This territory covers products that use confidential execution to protect trader behavior while keeping settlement and coordination legible enough to operate as a market."
+    },
+    {
+      "title": "Atlas Reading",
+      "body": "These nodes are a useful complement to DeFi because they show a different reason to care about confidentiality. The value is not just hidden execution quality; it is the ability to preserve private belief and positioning inside a live market."
+    }
+  ]
+}

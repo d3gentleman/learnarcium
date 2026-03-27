@@ -1,0 +1,20 @@
+{
+  "id": "proj-pythia",
+  "kind": "project",
+  "label": "Pythiamarkets",
+  "technicalLabel": "Pythiamarkets Info Market",
+  "compactLabel": "Pythia",
+  "tag": "INFO_MARKET",
+  "beginnerDescription": "An encrypted information market for predictions.",
+  "technicalDescription": "A prediction platform using confidential execution to conceal trader thesis and strategy while preserving settlement logic.",
+  "whyItMatters": "It demonstrates why encrypted market structure matters beyond pure finance: information itself becomes the product.",
+  "priority": "high",
+  "featuredOnOverview": true,
+  "categoryId": "cat-prediction",
+  "logoUrl": "/logos/pythia.png",
+  "action": {
+    "type": "external",
+    "href": "https://twitter.com/pythiamarkets",
+    "label": "Visit Project"
+  }
+}

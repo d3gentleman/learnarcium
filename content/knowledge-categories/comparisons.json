@@ -1,0 +1,20 @@
+{
+  "id": "enc-comp",
+  "slug": "comparisons",
+  "title": "Comparisons",
+  "tag": "/KNOWLEDGE_BASE/CMP_V1.1",
+  "summary": "Context for where Arcium fits relative to adjacent privacy approaches, execution models, and trust assumptions.",
+  "description": "How Arcium stacks up against other privacy-preserving layers, FHE, and traditional TEEs.",
+  "prefix": "CM",
+  "group": "knowledge",
+  "bodySections": [
+    {
+      "title": "What Lives Here",
+      "body": "Comparison content helps readers reason about Arcium by contrast. It focuses less on feature checklists and more on the structural differences between confidential execution, hardware trust models, and other privacy-preserving architectures."
+    },
+    {
+      "title": "Why It Matters",
+      "body": "Most new readers do not start from zero. They arrive with prior models for wallets, rollups, AI compute, or secure enclaves. Comparison pages anchor the atlas inside that existing context so the rest of the material is easier to evaluate."
+    }
+  ]
+}

@@ -2,6 +2,10 @@ import ActionLink from './ActionLink';
 import { FooterConfig } from '../types/domain';
 
 export default function Footer({ config }: { config: FooterConfig }) {
+  if (!config) {
+    return null;
+  }
+
   return (
     <footer className="console-window col-span-12 flex flex-col items-center py-10 relative">
       <div className="console-header w-full absolute top-0">
@@ -14,7 +18,7 @@ export default function Footer({ config }: { config: FooterConfig }) {
       </div>
 
       <div className="flex flex-wrap justify-center gap-8 text-[10px] uppercase font-bold text-slate-500 mb-8 tracking-widest">
-        {config.links.map((link, idx) => (
+        {config.links?.map((link, idx) => (
           <ActionLink
             key={idx}
             action={link}
@@ -27,9 +31,9 @@ export default function Footer({ config }: { config: FooterConfig }) {
       </div>
 
       <div className="text-[9px] text-center text-outline/40 uppercase leading-loose font-mono">
-        {config.metadata.copyright} <br />
-        {config.metadata.coords} <br />
-        <span className="text-primary/40">{config.metadata.mission}</span>
+        {config.metadata?.copyright} <br />
+        {config.metadata?.coords} <br />
+        <span className="text-primary/40">{config.metadata?.mission}</span>
       </div>
     </footer>
   );

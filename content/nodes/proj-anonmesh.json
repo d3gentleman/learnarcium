@@ -1,0 +1,19 @@
+{
+  "id": "proj-anonmesh",
+  "kind": "project",
+  "label": "Anonmesh",
+  "technicalLabel": "Anonmesh Mesh Comms",
+  "compactLabel": "Anonmesh",
+  "tag": "COMMUNICATIONS",
+  "beginnerDescription": "Direct, encrypted phone-to-phone communication without internet.",
+  "technicalDescription": "A mesh-style communications product using Arcium to protect messages and transaction flows across local-first transport.",
+  "whyItMatters": "It pushes Arcium into tangible private consumer experience rather than purely infrastructure narratives.",
+  "priority": "high",
+  "featuredOnOverview": true,
+  "categoryId": "cat-consumer",
+  "action": {
+    "type": "unavailable",
+    "label": "Coming Soon",
+    "reason": "This project is not yet live."
+  }
+}

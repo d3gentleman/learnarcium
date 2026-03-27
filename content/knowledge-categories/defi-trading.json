@@ -1,0 +1,20 @@
+{
+  "id": "cat-defi",
+  "slug": "defi-trading",
+  "title": "DeFi & Trading",
+  "tag": "FINANCE_LAYER",
+  "summary": "A territory focused on confidential order flow, private execution intent, and market infrastructure that does not leak strategy by default.",
+  "description": "Financial apps that protect your trading strategies and transaction history.",
+  "prefix": "DF",
+  "group": "ecosystem",
+  "bodySections": [
+    {
+      "title": "Market Structure",
+      "body": "This territory groups products that benefit when trade intent stays hidden until execution. Routing, OTC activity, and dark-pool style behavior all become more credible when the system does not force users to reveal strategy to the public mempool or to counterparties too early."
+    },
+    {
+      "title": "Atlas Reading",
+      "body": "Use this page as the narrative layer for the DeFi region of the map. The related projects show how Arcium can serve both familiar consumer entry points and more specialized execution workflows where confidentiality is part of the product value, not just an implementation detail."
+    }
+  ]
+}

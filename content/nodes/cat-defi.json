@@ -1,0 +1,18 @@
+{
+  "id": "cat-defi",
+  "kind": "category",
+  "label": "DeFi & Trading",
+  "technicalLabel": "CONFIDENTIAL MARKETS",
+  "compactLabel": "DeFi",
+  "tag": "FINANCE_LAYER",
+  "beginnerDescription": "Financial apps that protect your trading strategies and transaction history.",
+  "technicalDescription": "Financial apps that protect your trading strategies and transaction history. Arcium lets trading systems hide order flow, execution intent, and position data without leaving public liquidity behind.",
+  "whyItMatters": "Arcium lets trading systems hide order flow, execution intent, and position data without leaving public liquidity behind.",
+  "priority": "high",
+  "featuredOnOverview": false,
+  "action": {
+    "type": "internal",
+    "href": "/encyclopedia/categories/defi-trading",
+    "label": "Open category guide"
+  }
+}

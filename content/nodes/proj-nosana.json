@@ -1,0 +1,20 @@
+{
+  "id": "proj-nosana",
+  "kind": "project",
+  "label": "Nosana",
+  "technicalLabel": "Nosana GPU Grid",
+  "compactLabel": "Nosana",
+  "tag": "COMPUTE_GRID",
+  "beginnerDescription": "A network providing computing power for AI tasks.",
+  "technicalDescription": "A decentralized GPU grid where Arcium keeps datasets and intermediate computation encrypted during model execution.",
+  "whyItMatters": "It makes the confidential AI story feel infrastructural, not hypothetical.",
+  "priority": "high",
+  "featuredOnOverview": true,
+  "categoryId": "cat-ai",
+  "logoUrl": "/logos/nosana.png",
+  "action": {
+    "type": "external",
+    "href": "https://nosana.io",
+    "label": "Visit Project"
+  }
+}

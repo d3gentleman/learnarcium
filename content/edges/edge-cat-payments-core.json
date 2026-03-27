@@ -1,0 +1,8 @@
+{
+  "id": "edge-cat-payments-core",
+  "sourceId": "cat-payments",
+  "targetId": "arcium",
+  "relationKind": "core_connection",
+  "beginnerCaption": "Private wallet operations",
+  "technicalCaption": "MPC signing, key workflows, and confidential transaction logic"
+}

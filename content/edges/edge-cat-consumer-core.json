@@ -1,0 +1,8 @@
+{
+  "id": "edge-cat-consumer-core",
+  "sourceId": "cat-consumer",
+  "targetId": "arcium",
+  "relationKind": "core_connection",
+  "beginnerCaption": "Privacy built into product UX",
+  "technicalCaption": "Sensitive consumer flows protected with background confidential execution"
+}

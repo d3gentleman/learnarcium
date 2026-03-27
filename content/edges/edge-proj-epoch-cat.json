@@ -1,0 +1,8 @@
+{
+  "id": "edge-proj-epoch-cat",
+  "sourceId": "proj-epoch",
+  "targetId": "cat-prediction",
+  "relationKind": "belongs_to",
+  "beginnerCaption": "Private forecasting",
+  "technicalCaption": "Shields market depth and participant behavior in prediction flows"
+}

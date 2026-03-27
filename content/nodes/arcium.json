@@ -1,0 +1,18 @@
+{
+  "id": "arcium",
+  "kind": "core",
+  "label": "ARCIUM",
+  "technicalLabel": "ARCIUM CONFIDENTIAL CORE",
+  "compactLabel": "ARCIUM",
+  "tag": "CORE_NETWORK",
+  "beginnerDescription": "The privacy layer of Web3. Arcium helps applications keep user data secure and confidential.",
+  "technicalDescription": "A decentralized, chain-agnostic confidential computing network powered by Multi-Party Computation Execution Environments.",
+  "whyItMatters": "It is the execution layer that ties every territory on the map together with confidential compute.",
+  "priority": "high",
+  "featuredOnOverview": false,
+  "action": {
+    "type": "internal",
+    "href": "/encyclopedia/articles/understanding-arcium",
+    "label": "Read overview"
+  }
+}

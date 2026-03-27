@@ -1,0 +1,20 @@
+{
+  "id": "cat-ai",
+  "slug": "artificial-intelligence",
+  "title": "Artificial Intelligence",
+  "tag": "COMPUTE_LAYER",
+  "summary": "Private inference, protected prompts, and encrypted datasets are the main thread through this AI-focused territory.",
+  "description": "AI bots and models that can process sensitive information without exposing the raw data.",
+  "prefix": "AI",
+  "group": "ecosystem",
+  "bodySections": [
+    {
+      "title": "Private Inference",
+      "body": "AI products become much more usable when a user does not have to choose between utility and confidentiality. This territory maps the systems that treat Arcium as a secure execution layer for prompts, intermediate computation, model calls, or agent workflows."
+    },
+    {
+      "title": "Atlas Reading",
+      "body": "The nodes here are useful because they span infrastructure and user-facing experiences. Some represent compute supply, while others represent applications that turn secure execution into something a non-technical user can immediately understand."
+    }
+  ]
+}

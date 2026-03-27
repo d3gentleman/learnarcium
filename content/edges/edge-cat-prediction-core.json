@@ -1,0 +1,8 @@
+{
+  "id": "edge-cat-prediction-core",
+  "sourceId": "cat-prediction",
+  "targetId": "arcium",
+  "relationKind": "core_connection",
+  "beginnerCaption": "Hidden market positions",
+  "technicalCaption": "Encrypted order intent and trader privacy for information markets"
+}

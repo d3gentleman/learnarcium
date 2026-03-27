@@ -1,0 +1,11 @@
+{
+  "id": "eco-jup",
+  "slug": "eco-jup",
+  "title": "Jupiter",
+  "tag": "DEX_AGGREGATOR",
+  "summary": "Jupiter",
+  "logo": "/images/ecosystem/eco-jup/logo.svg",
+  "status": "sync_ok",
+  "categoryId": "defi-trading",
+  "isFeatured": false
+}

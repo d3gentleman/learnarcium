@@ -1,47 +1,34 @@
 import EncyclopediaGrid from '@/components/EncyclopediaGrid';
 import Footer from '@/components/Footer';
-import HeroMapPreview from '@/components/HeroMapPreview';
+import Hero from '@/components/Hero';
 import NavBar from '@/components/NavBar';
 import RecentlyUpdated from '@/components/RecentlyUpdated';
 import StartHereSection from '@/components/StartHereSection';
 import {
   getFooterConfig,
   getHomepageBlocks,
-  getMapCategories,
-  getMapNodes,
-  getCategoryColors,
   getNavigation,
   getRecentArticles,
-  getUIConfig,
 } from '@/lib/content';
 
-export default function Home() {
-  const navLinks = getNavigation();
-  const blocks = getHomepageBlocks();
-  const recentArticles = getRecentArticles();
-  const footerConfig = getFooterConfig();
-  const ui = getUIConfig();
-  const previewMapProps = {
-    domainNodes: getMapNodes(),
-    mapCategories: getMapCategories(),
-    categoryColors: getCategoryColors(),
-    ui,
-  };
+export default async function Home() {
+  const navLinks = await getNavigation();
+  const blocks = await getHomepageBlocks();
+  const recentArticles = await getRecentArticles();
+  const footerConfig = await getFooterConfig();
 
   return (
-    <>
+    <div className="col-span-12 space-y-4">
       <NavBar links={navLinks} />
-      <HeroMapPreview
+      <Hero
         hero={blocks.hero}
         quickLinks={blocks.quickLinks}
         liveStatusFeed={blocks.liveStatusFeed}
-        ui={ui}
-        mapProps={previewMapProps}
       />
       <StartHereSection cards={blocks.startHereCards} />
       <EncyclopediaGrid categories={blocks.encyclopediaCategories} />
       <RecentlyUpdated articles={recentArticles} />
       <Footer config={footerConfig} />
-    </>
+    </div>
   );
 }

@@ -1,0 +1,8 @@
+{
+  "id": "edge-proj-pythia-cat",
+  "sourceId": "proj-pythia",
+  "targetId": "cat-prediction",
+  "relationKind": "belongs_to",
+  "beginnerCaption": "Encrypted prediction market",
+  "technicalCaption": "Uses confidential execution to keep position data and signal private"
+}

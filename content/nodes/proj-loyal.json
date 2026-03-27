@@ -1,0 +1,19 @@
+{
+  "id": "proj-loyal",
+  "kind": "project",
+  "label": "Loyal",
+  "technicalLabel": "Loyal Agent Runtime",
+  "compactLabel": "Loyal",
+  "tag": "AI_AGENT",
+  "beginnerDescription": "An AI assistant that protects your daily life and crypto data.",
+  "technicalDescription": "An on-chain AI agent powered by Arcium and MagicBlock, focused on keeping user data private at inference time.",
+  "whyItMatters": "Agent products are user-facing, so they help translate technical privacy guarantees into obvious consumer value.",
+  "priority": "medium",
+  "featuredOnOverview": false,
+  "categoryId": "cat-ai",
+  "action": {
+    "type": "external",
+    "href": "https://twitter.com/loyal",
+    "label": "Visit Project"
+  }
+}

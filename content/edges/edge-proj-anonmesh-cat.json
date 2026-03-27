@@ -1,0 +1,8 @@
+{
+  "id": "edge-proj-anonmesh-cat",
+  "sourceId": "proj-anonmesh",
+  "targetId": "cat-consumer",
+  "relationKind": "belongs_to",
+  "beginnerCaption": "Private messaging and payments",
+  "technicalCaption": "Combines local-first transport with Arcium-protected communications and transfers"
+}

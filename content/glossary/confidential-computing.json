@@ -1,0 +1,25 @@
+{
+  "id": "glossary-confidential-computing",
+  "slug": "confidential-computing",
+  "term": "Confidential Computing",
+  "tag": "CORE_CONCEPT",
+  "summary": "Confidential computing is the practical outcome Arcium is targeting: useful computation over protected inputs without exposing the raw data during execution.",
+  "aliases": [
+    "Confidential Compute",
+    "Private Compute"
+  ],
+  "keywords": [
+    "protected inputs",
+    "encrypted execution",
+    "privacy"
+  ],
+  "priority": "high",
+  "source": {
+    "label": "Arcium Docs: Architecture Overview",
+    "href": "https://docs.arcium.com/getting-started/architecture-overview/architecture-overview"
+  },
+  "relatedCategoryIds": [
+    "enc-crypto",
+    "enc-infra"
+  ]
+}

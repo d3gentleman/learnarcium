@@ -1,0 +1,24 @@
+{
+  "id": "glossary-permissioned-cluster",
+  "slug": "permissioned-cluster",
+  "term": "Permissioned Cluster",
+  "tag": "ACCESS_MODEL",
+  "summary": "A permissioned cluster is a cluster with controlled participation, used when a workflow needs a more curated operator set or tighter organizational control.",
+  "aliases": [
+    "Permissioned Clusters"
+  ],
+  "keywords": [
+    "access control",
+    "operator set",
+    "cluster policy"
+  ],
+  "priority": "medium",
+  "source": {
+    "label": "Arcium Docs: Permissioned Clusters",
+    "href": "https://docs.arcium.com/clusters/permissioned-clusters"
+  },
+  "relatedCategoryIds": [
+    "enc-infra",
+    "enc-comp"
+  ]
+}

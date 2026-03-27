@@ -1,0 +1,8 @@
+{
+  "id": "edge-cat-ai-core",
+  "sourceId": "cat-ai",
+  "targetId": "arcium",
+  "relationKind": "core_connection",
+  "beginnerCaption": "Encrypted model execution",
+  "technicalCaption": "Secure inference and protected datasets on Arcium compute"
+}

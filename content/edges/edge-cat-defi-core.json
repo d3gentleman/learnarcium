@@ -1,0 +1,8 @@
+{
+  "id": "edge-cat-defi-core",
+  "sourceId": "cat-defi",
+  "targetId": "arcium",
+  "relationKind": "core_connection",
+  "beginnerCaption": "Private market infrastructure",
+  "technicalCaption": "Confidential order flow and execution logic via Arcium MXEs"
+}
